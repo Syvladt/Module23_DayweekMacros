@@ -4,45 +4,17 @@
 #include "DayweekMacros.h"
 #include <iostream>
 
-#define MONDAY 1
-#define TUESDAY 2
-#define WEDNESDAY 3
-#define THURSDAY 4
-#define FRIDAY 5
-#define SATURDAY 6
-#define SUNDAY 7
+#define DAY_1 "Monday"
+#define DAY_2 "Tuesday"
+#define DAY_3 "Wednesday"
+#define DAY_4 "Thursday"
+#define DAY_5 "Friday"
+#define DAY_6 "Saturday"
+#define DAY_7 "Sunday"
 
-int main()
-{
-	int number;
-	std::cout << "Enter number of weekday: ";
-	std::cin >> number;
-	
-	switch(number)
-	{
-	case 1:
-		std::cout << "MONDAY" << '\n';
-		break;
-	case 2:
-		std::cout << "TUESDAY" << '\n';
-		break;
-	case 3:
-		std::cout << "WEDNESDAY" << '\n';
-		break;
-	case 4:
-		std::cout << "THURSDAY" << '\n';
-		break;
-	case 5:
-		std::cout << "FRIDAY" << '\n';
-		break;
-	case 6:
-		std::cout << "SATURDAY" << '\n';
-		break;
-	case 7:
-		std::cout << "SUNDAY" << '\n';
-		break;
-	default:
-		std::cout << "Incorrect enter!" << '\n';
-	}
-	return 0;
+#define DAY_OF_WEEK(num) DAY_ ## num
+
+int main() {
+    std::cout << DAY_OF_WEEK(7);
+    return 0;
 }
